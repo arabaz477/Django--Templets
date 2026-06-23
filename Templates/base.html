@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body class="data">
+<table width="100%">
+    <tr style="height:80px;background-color:gold;">
+        <td align="center">
+            <table cellpadding="10" cellspacing="20">
+                <tr>
+                    <th><a href="{% url 'Home' %}">Home</a></th>
+                    <th><a href="{% url 'About' %}">About</a></th>
+                    <th><a href="{% url 'Index' %}">Index</a></th>
+                    <th><a href="{% url 'Services' %}">Services</a></th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr style="height:400px">
+        <td align="center">
+            {% block content %}
+            {% endblock %}
+        </td>
+    </tr>
+    <tr style="height:200px; background-color:darkblue;">
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
